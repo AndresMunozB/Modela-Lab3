@@ -1,0 +1,16 @@
+function graph_d(x,y,titulo,etiquetax,etiquetay)
+
+    figure1 = figure;
+    % Create axes
+    axes1 = axes('Parent',figure1);
+    
+    %Gráfico de respuesta discreta al escalón con tiempo de muestreo 0.1
+    stairs(x, y);
+    box(axes1,'on');
+    hold(axes1,'on');
+    grid(axes1,'on')
+    title(titulo);
+    xlabel('Time');
+    ylabel('Amplitude');
+    
+end
