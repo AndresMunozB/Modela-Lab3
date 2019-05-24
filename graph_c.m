@@ -1,4 +1,4 @@
-function graph_c(numerador,denominador,titulo,etiquetax,etiquetay,leyenda)
+function graph_c(numerador,denominador,titulo,xlimit)
     
     %Se define figura para posteriormente poder guardar las gráficas
     figure1 = figure;
@@ -7,12 +7,12 @@ function graph_c(numerador,denominador,titulo,etiquetax,etiquetay,leyenda)
     axes1 = axes('Parent',figure1);
     
     step(numerador,denominador);
+    xlim(xlimit)
     box(axes1,'on');
     hold(axes1,'on');
     grid(axes1,'on')
     title(titulo);
-    xlabel(etiquetax);
-    ylabel(etiquetay);
-    legend(leyenda);
+    xlabel('Time');
+    ylabel('Amplitude');
     
 end
