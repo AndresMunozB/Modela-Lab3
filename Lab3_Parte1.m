@@ -61,24 +61,24 @@ stairs(x, y);
 title('Respuesta discreta al escalón con tiempo de muestreo = 0.1')
 %Se añade grilla al gráfico
 grid on
-%Se guarda el grÃ¡fico
+%Se guarda el gráfico
 saveas(figure1, 'RespDiscreta0.1.png')
 
 
 %%%%%%%%%%%%%%%%%%%%%%% DISCRETO A CONTINUO (D-C) %%%%%%%%%%%%%%%%%%%%%%%%
 
-%Se pasa la funciÃ³n con tiempo de muestreo igual a 0.1 a continua
+%Se pasa la función con tiempo de muestreo igual a 0.1 a continua
 %nuevamente
 [numC, denC] = d2cm(numD_2, denD_2, 0.1, 'zoh');
 
-%Grafico de respuesta al escalÃ³n de la funciÃ³n continua
+%Grafico de respuesta al escalón de la función continua
 step(numC, denC)
-%Se aÃ±ade tÃ­tulo al grÃ¡fico
-title('FunciÃ³n de discreta a continua')
-%Se crean limites en el eje X para comparar con grÃ¡ficos previamente
+%Se añade título al gráfico
+title('Función de discreta a continua')
+%Se crean limites en el eje X para comparar con gráficos previamente
 %realizados
 xlim([0 20])
-%Se aÃ±ade grilla al grÃ¡fico
+%Se añade grilla al gráfico
 grid on
-%Se guarda el grÃ¡fico
+%Se guarda el gráfico
 saveas(figure1, 'RespCont(D-C).png')
